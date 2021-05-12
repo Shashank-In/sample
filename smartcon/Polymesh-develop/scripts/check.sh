@@ -1,0 +1,1 @@
+BUILD_DUMMY_WASM_BINARY=true cargo check

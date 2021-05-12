@@ -1,0 +1,90 @@
+{
+  "name": "@pods/contracts-v1",
+  "version": "1.0.0",
+  "description": "Pods Protocol V1 smart contracts",
+  "author": "Pods Finance",
+  "contributors": [
+    "Guilherme Viana <rob@pods.com>",
+    "Robson Silva <gui@pods.com>"
+  ],
+  "license": "AGPL-3.0-or-later",
+  "scripts": {
+    "lint": "./node_modules/.bin/solhint -f table contracts/**/*.sol",
+    "prettier": "./node_modules/.bin/prettier contracts/**/*.sol",
+    "prettier:fix": "./node_modules/.bin/prettier --write contracts/**/*.sol",
+    "test": "hardhat test",
+    "compile": "hardhat compile",
+    "coverage": "hardhat coverage --network coverage",
+    "exportABI": "hardhat exportABI"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pods-finance/contracts.git"
+  },
+  "keywords": [
+    "solidity",
+    "ethereum",
+    "token",
+    "erc20",
+    "defi"
+  ],
+  "bugs": {
+    "url": "https://github.com/pods-finance/contracts/issues"
+  },
+  "homepage": "https://github.com/pods-finance/contracts#readme",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "2.0.1",
+    "@nomiclabs/hardhat-etherscan": "2.1.1",
+    "@nomiclabs/hardhat-solhint": "2.0.0",
+    "@nomiclabs/hardhat-waffle": "2.0.1",
+    "@nomiclabs/hardhat-web3": "2.0.0",
+    "@tenderly/hardhat-tenderly": "1.0.12",
+    "chai": "4.2.0",
+    "dotenv": "8.2.0",
+    "ethereum-waffle": "3.2.2",
+    "ethers": "5.0.26",
+    "hardhat": "2.2.0",
+    "hardhat-contract-sizer": "2.0.3",
+    "hardhat-gas-reporter": "1.0.4",
+    "hardhat-spdx-license-identifier": "2.0.3",
+    "husky": "4.2.5",
+    "mocha": "7.2.0",
+    "prettier": "2.0.5",
+    "prettier-plugin-solidity": "1.0.0-alpha.54",
+    "solhint": "3.0.0",
+    "solhint-plugin-prettier": "0.0.4",
+    "solidity-coverage": "0.7.14",
+    "standard": "14.3.4",
+    "web3": "1.2.9"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "3.0.1",
+    "bignumber.js": "9.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint && yarn prettier:fix && yarn compile && yarn exportABI",
+      "pre-push": "./pre-push-check.sh"
+    }
+  },
+  "standard": {
+    "globals": [
+      "it",
+      "describe",
+      "before",
+      "beforeAll",
+      "beforeEach",
+      "test",
+      "expect",
+      "fetch",
+      "run",
+      "task",
+      "internalTask",
+      "usePlugin",
+      "ethers",
+      "artifacts",
+      "web3",
+      "hre"
+    ]
+  }
+}

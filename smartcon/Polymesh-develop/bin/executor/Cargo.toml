@@ -1,0 +1,58 @@
+[package]
+name = "node-executor"
+version = "2.0.0"
+authors = ["Parity Technologies <admin@parity.io>"]
+description = "Substrate node implementation in Rust."
+edition = "2018"
+license = "Apache-2.0"
+homepage = "https://substrate.dev"
+repository = "https://github.com/PolymathNetwork/substrate/"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[dependencies]
+codec = { package = "parity-scale-codec", version = "1.3.4" }
+node-primitives = { package = "polymesh-primitives", path = "../../primitives" }
+node-runtime = { package = "polymesh-runtime-testnet", path = "../../pallets/runtime/testnet" }
+sc-executor = { version = "0.8.1", features = ["wasmtime"] }
+sp-core = { version = "2.0.1" }
+sp-io = { version = "2.0.1" }
+sp-state-machine = { version = "0.8.1" }
+sp-trie = { version = "2.0.1" }
+trie-root = "0.16.0"
+frame-benchmarking = { version = "2.0.1" }
+
+[dev-dependencies]
+node-testing = { path = "../testing" }
+pallet-transaction-payment = { path = "../../pallets/transaction-payment" }
+pallet-balances = { path = "../../pallets/balances" }
+
+criterion = "0.3.0"
+frame-support = { version = "2.0.1" }
+frame-system = { version = "2.0.1" }
+pallet-contracts = { version = "2.0.1" }
+pallet-grandpa = { version = "2.0.1" }
+pallet-im-online = { version = "2.0.1" }
+pallet-indices = { version = "2.0.1" }
+pallet-session = { version = "2.0.1" }
+pallet-timestamp = { version = "2.0.1" }
+pallet-treasury = { version = "2.0.1" }
+sp-application-crypto = { version = "2.0.1" }
+sp-runtime = { version = "2.0.1" }
+sp-externalities = { version = "0.8.1" }
+substrate-test-client = { git = "https://github.com/PolymathNetwork/substrate", tag = "v2.0.1-2" }
+wabt = "0.10.0"
+
+[features]
+wasmtime = [
+	"sc-executor/wasmtime",
+]
+wasmi-errno = [
+	"sc-executor/wasmi-errno",
+]
+stress-test = []
+
+[[bench]]
+name = "bench"
+harness = false

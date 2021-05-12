@@ -1,0 +1,8 @@
+node_modules
+secret.json
+build
+.DS_Store
+.vscode
+deployments
+artifacts
+cache

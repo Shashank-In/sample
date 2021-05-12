@@ -1,0 +1,77 @@
+{
+  "name": "pwallet",
+  "private": true,
+  "dependencies": {
+    "@cosmjs/stargate": "^v0.25.0-alpha.3",
+    "@cosmjs/proto-signing": "^v0.25.0-alpha.3",
+    "@cosmjs/crypto": "^v0.25.0-alpha.3",
+    "@cosmostation/cosmosjs": "^0.9.5",
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "@tendermint/sig": "^0.6.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/create-hash": "^1.2.2",
+    "@types/secp256k1": "^4.0.1",
+    "async": "^3.2.0",
+    "axios": "^0.21.1",
+    "bech32": "^1.1.3",
+    "bip32": "^2.0.5",
+    "bip39": "^3.0.2",
+    "bitcoinjs-lib": "^4.0.2",
+    "bootstrap": "^4.6.0",
+    "crypto": "^1.0.1",
+    "lodash": "^4.17.21",
+    "material-ui-dropzone": "^3.5.0",
+    "moment": "^2.29.1",
+    "mui-datatables": "^3.7.6",
+    "qrcode.react": "^1.0.1",
+    "react": "^17.0.1",
+    "react-bootstrap": "^1.4.3",
+    "react-copy-to-clipboard": "^5.0.3",
+    "react-data-table-component": "^6.11.6",
+    "react-dom": "^17.0.1",
+    "react-download-link": "^2.3.0",
+    "react-mailchimp-subscribe": "^2.1.0",
+    "react-redux": "^7.2.2",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "4.0.3",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^5.1.1",
+    "web-vitals": "^1.0.1",
+    "i18next": "^19.8.7",
+    "i18next-browser-languagedetector": "^6.0.1",
+    "react-i18next": "^11.8.6"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^7.24.0",
+    "eslint-plugin-react": "^7.23.2"
+  }
+}

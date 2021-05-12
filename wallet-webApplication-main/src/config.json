@@ -1,0 +1,13 @@
+{
+  "chainID" : "test-core-1",
+  "chainName": "Persistence test-net",
+  "addressPrefix": "persistence",
+  "coinType": "750",
+  "coinDenom": "uxprt",
+  "coinName": "XPRT",
+  "xprtValue": 1000000,
+  "defaultFee": "5000",
+  "vestingAccountFee": "0",
+  "modeType": "sync",
+  "version": "0.1.4"
+}

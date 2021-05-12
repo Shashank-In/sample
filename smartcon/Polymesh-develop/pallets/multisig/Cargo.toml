@@ -1,0 +1,51 @@
+[package]
+name = "pallet-multisig"
+version = "0.1.0"
+authors = ["Polymath Inc."]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+pallet-identity = { path = "../identity", default-features = false}
+pallet-permissions = { path = "../permissions", default-features = false }
+polymesh-common-utilities = {path = "../common", default-features = false}
+polymesh-primitives = { path = "../../primitives", default-features = false}
+
+# General
+serde = { version = "1.0.104", default-features = false }
+
+# Substrate
+codec = { package = "parity-scale-codec", version = "1.2.0", default-features = false, features = ["derive"] }
+sp-runtime = { version = "2.0.1", default-features = false }
+sp-std = { version = "2.0.1", default-features = false }
+sp-core = { version = "2.0.1", default-features = false }
+sp-version = { version = "2.0.1", default-features = false }
+
+frame-system = { version = "2.0.1", default-features = false }
+frame-support = { version = "2.0.1", default-features = false }
+frame-benchmarking = { default-features = false, version = "2.0.1", optional = true }
+
+pallet-timestamp = { version = "2.0.1", default-features = false }
+
+[features]
+equalize = []
+default = ["std", "equalize"]
+no_std = []
+only-staking = []
+std = [
+	"serde/std",
+	"codec/std",
+	"sp-std/std",
+	"sp-core/std",
+	"sp-runtime/std",
+	"frame-benchmarking/std",
+	"frame-system/std",
+	"frame-support/std",
+	"polymesh-primitives/std",
+	"polymesh-common-utilities/std",
+	"pallet-identity/std",
+]
+runtime-benchmarks = [
+	"frame-benchmarking",
+]

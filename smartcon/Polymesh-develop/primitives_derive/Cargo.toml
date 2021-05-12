@@ -1,0 +1,18 @@
+[package]
+name = "polymesh-primitives-derive"
+version = "0.1.0"
+authors = ["Polymath"]
+edition = "2018"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = { version = "1.0.58", features = ["visit-mut"] }
+quote = "1.0.7"
+proc-macro2 = "1.0.24"
+
+[features]
+default = ["std"]
+no_std = []
+std = []
